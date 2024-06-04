@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail</title>
+</head>
+<style>
+    #wrap {
+        position: relative;
+        width: 500px;
+        padding: 15px 20px;
+        margin: 0 auto;
+        }
+        button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid #ccc;
+            font-size: 14px;
+            padding: 5px;
+        }
+        .over {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .detail {
+            width: 400px;
+            display: none;
+        }
+    
+</style>
+<body>
+    <div id="wrap">
+    <img src="images/fr.jpg" alt="이미지">
+    <button class="over" id="open" onclick="showDetail()">상세 설명보기</button>
+    <div class="detail" id="desc">
+        <h4>Lorem ipsum dolor sit.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, necessitatibus soluta reiciendis sunt ullam inventore ipsam aspernatur tempore voluptate, minus iusto accusantium velit iure illum facere? Magnam at corporis ratione.</p>
+        <button id="class" onclick = " hideDetail()">상세 설명닫기</button>
+    </div>
+</div>
+<script>
+    function showDetail(){
+        document.querySelector ("#desc").style.display = "block";
+        document.querySelector("#open").style.display = "none";
+    }
+    function hideDetail(){
+        document.querySelector ("#desc").style.display = "none";
+        document.querySelector("#open").style.display = "block";}
+</script>
+
+</body>
+</html>

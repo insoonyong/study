@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구조 가상 클래스</title>
+    <style>
+      .contents {
+        width: 300px;
+      }
+      .contents :nth-child(2n + 1) {
+        background-color: aqua;
+      }
+      .hot::after {
+        content: "HOT";
+        font-size: 10px;
+        padding: 2px 4px;
+        margin: 0 10px;
+        border-radius: 2px;
+        background-color: #f00;
+        color: #fff;
+      }
+      /* .icon {
+        content: "";
+        background: url("images/img.png") center no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+      } */
+      .icon::before {
+        /* 이미지를 넣을땐 content: ""; 꼭 명시 */
+        content: "";
+        background: url("images/img.png") center no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="contents">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+        alias.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+        alias.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+        alias.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+        alias.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+        alias.
+      </p>
+    </div>
+    <div class="container">
+      <h1>제품 목록</h1>
+      <ul>
+        <li class="hot">제품1</li>
+        <li class="hot">제품3</li>
+        <li>제품4</li>
+      </ul>
+      <div class="icon">제품4</div>
+    </div>
+  </body>
+</html>

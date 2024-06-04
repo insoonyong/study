@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 40px;
+        }
+        .bg-tr {
+            background-color: aqua;
+            transition: all ease-in-out 2s;
+        }
+        .bg-tr:hover {
+            background-color: rgb(87, 26, 185);
+            border: 20px solid #ba1212;
+            transform:rotate3d(-50, -20, -25, 45deg )
+        }
+        .border-tr {
+            background-color: burlywood;
+            border: 3px solid #000;
+            transition: all linear 1s;
+        }
+        .border-tr:hover {
+            border: 3px solid red ;
+            border-radius: 50%; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bg-tr"></div>
+    <div class="border-tr"></div>
+</body>
+</html>
